@@ -4,6 +4,7 @@ $color-text:#A6ADB4;
 $color-heading:#202124;
 $color-gray:#F6F8F9;
 $color-accent:#FA6980;
+$color-footer:#CBD0D3;
 
 
 @mixin inner($w:800px) {
@@ -78,7 +79,7 @@ a {
         font-weight: bold;
         font-size: 12px
     }
-    &__home {
+    &__main {
         color: #343638;
     }
 
@@ -135,6 +136,13 @@ a {
         color: $color-heading;
         padding-bottom: 10px;
     }
+    &__top {
+        margin-top: 60px;
+    }
+    &__btn {
+        margin-top: 31px;
+        margin-bottom: 60px;
+    }
 }
 .trending {
     background-color: $color-gray;
@@ -148,6 +156,27 @@ a {
     &__item {
         width: 47.5%;
         margin-bottom: 60px
+    }
+}
+.discovery {
+    background-color: $color-gray;
+
+    &__inner {
+        @include inner;
+    }
+    &__list {
+        @include flex;
+    }
+    &__item {
+        width: 30%;
+        margin-bottom: 60px
+    }
+    &__timearea {
+        @include flex($justify:none);
+        align-items: center;
+    }
+    &__time {
+        padding-left: 10px;
     }
 }
 .card {
@@ -168,11 +197,12 @@ a {
 }
 
 
+
 .footer {
     background-color: $color-text;
 
     &__text {
-        color: #fff;
+        color: $color-footer;
         padding-top: 100px;
         padding-bottom: 42px;
     }

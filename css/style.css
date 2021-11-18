@@ -56,7 +56,7 @@ a {
   font-weight: bold;
   font-size: 12px;
 }
-.g-nav__home {
+.g-nav__main {
   color: #343638;
 }
 
@@ -133,6 +133,13 @@ a {
   color: #202124;
   padding-bottom: 10px;
 }
+.col__top {
+  margin-top: 60px;
+}
+.col__btn {
+  margin-top: 31px;
+  margin-bottom: 60px;
+}
 
 .trending {
   background-color: #F6F8F9;
@@ -157,6 +164,45 @@ a {
   margin-bottom: 60px;
 }
 
+.discovery {
+  background-color: #F6F8F9;
+}
+.discovery__inner {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+}
+.discovery__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.discovery__item {
+  width: 30%;
+  margin-bottom: 60px;
+}
+.discovery__timearea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.discovery__time {
+  padding-left: 10px;
+}
+
 .card__title {
   font-size: 18px;
   font-weight: bold;
@@ -178,7 +224,7 @@ a {
   background-color: #A6ADB4;
 }
 .footer__text {
-  color: #fff;
+  color: #CBD0D3;
   padding-top: 100px;
   padding-bottom: 42px;
 }
