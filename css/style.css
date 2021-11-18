@@ -102,6 +102,7 @@ a {
 .morenews__time {
   font-style: italic;
   font-size: 12px;
+  padding-left: 10px;
 }
 .morenews__timearea {
   display: -webkit-box;
@@ -116,9 +117,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 60px;
-}
-.morenews__time {
-  padding-left: 10px;
 }
 
 .col__category {
@@ -200,6 +198,8 @@ a {
           align-items: center;
 }
 .discovery__time {
+  font-style: italic;
+  font-size: 12px;
   padding-left: 10px;
 }
 
