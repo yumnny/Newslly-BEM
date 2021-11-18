@@ -1,1 +1,182 @@
 @charset "utf-8";
+
+$color-text:#A6ADB4;
+$color-heading:#202124;
+$color-gray:#F6F8F9;
+$color-accent:#FA6980;
+
+
+@mixin inner($w:800px) {
+    max-width: $w;
+    width: 90%;
+    margin: 0 auto;
+}
+@mixin flex($justify:space-between){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+}
+@mixin subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: $color-heading;
+    padding-bottom: 10px;
+}
+
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: $color-text;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom; //画像の下に出来る謎の余白を消す
+    height: auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+//BLOCK -------------------
+
+
+.title-main {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        padding-top: 60px;
+        border-bottom: 1px solid #EBEDED;
+        color: $color-heading;
+        font-size: 24px;
+        font-weight: bold;
+}
+.btn {
+    display: inline-block;
+    background-color: $color-accent;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+    padding: 13px 43px;
+}
+.g-nav {
+
+    &__list {
+        @include flex($justify:none);
+    }
+    &__item {
+        padding-left: 20px;
+    }
+    &__link {
+        color: $color-text;
+        font-weight: bold;
+        font-size: 12px
+    }
+    &__home {
+        color: #343638;
+    }
+
+}
+
+.header {
+
+    &__inner {
+        @include inner;
+        @include flex();
+        align-items: center;
+        margin-top: 30px;
+    }
+}
+
+.morenews {
+
+    &__inner {
+        @include inner;
+    }
+    &__item {
+        width: 47.5%;
+    }
+    &__list {
+        @include flex;
+    }
+    &__text {
+        padding-bottom: 20px;
+    }
+    &__time {
+        font-style: italic;
+        font-size: 12px;
+    }
+    &__timearea {
+        @include flex($justify:none);
+        align-items: center;
+        margin-bottom: 60px;
+    }
+    &__time {
+        padding-left: 10px;
+    }
+}
+.col {
+
+    &__category {
+        font-size: 12px;
+        font-weight: bold;
+        color: $color-accent;
+        padding-bottom: 5px;
+    }
+    &__title {
+        font-size: 18px;
+        font-weight: bold;
+        color: $color-heading;
+        padding-bottom: 10px;
+    }
+}
+.trending {
+    background-color: $color-gray;
+
+    &__inner {
+        @include inner;
+    }
+    &__list {
+        @include flex;
+    }
+    &__item {
+        width: 47.5%;
+        margin-bottom: 60px
+    }
+}
+.card {
+
+    &__title {
+        @include subtitle;
+    }
+    &__body {
+        background-color: #fff;
+        padding: 35px 35px 31px;
+    }
+    &__text {
+        padding-bottom: 30px;
+    }
+    &__btn {
+        text-align: right;
+    }
+}
+
+
+.footer {
+    background-color: $color-text;
+
+    &__text {
+        color: #fff;
+        padding-top: 100px;
+        padding-bottom: 42px;
+    }
+    &__inner {
+        @include inner;
+    }
+}
